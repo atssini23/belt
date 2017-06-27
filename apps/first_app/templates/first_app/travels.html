@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>logged</title>
+  </head>
+  <body>
+    <h1>Hello, {{request.session.first_name}} !</h1>
+    <h5><a href="/">Logout</a></h5>
+    <h4>Your Trip Schedule</h4>
+    <table>
+      {% csrf_token %}
+      <tr>
+        <th>Destination</th>
+        <th>Travel Start Date</th>
+        <th>Travel End Date</th>
+        <th>Plan</th>
+      </tr>
+      <tr>
+        <td>{{trip.destination}}</td>
+        <td>{{trip.travelfrom}}</td>
+        <td>{{trip.travelto}}</td>
+        <td>{{trip.destination}}</td>
+      </tr>
+    </table>
+
+
+
+
+
+
+
+    <h5><a href="/travels/add">Add Travel Plan</a></h5>
+  </body>
+</html>
